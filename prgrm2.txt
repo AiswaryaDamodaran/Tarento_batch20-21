@@ -1,0 +1,40 @@
+/*Program 2:
+- Accept a String input
+- Accept a String of valid chars
+- Remove all the characters that are not present in the valid chars from the input string
+- Print the cleansed String and the count of characters removed*/
+
+#include <stdio.h>
+#include<string.h>
+
+int main()
+{
+   
+ char str[100];
+ char valchar[50];
+ int i,j,k=0,ls,lv,count=0;
+ char ch[100];
+ 
+ printf("Enter a string : ");
+ scanf("%s",str);
+ ls=strlen(str);
+ 
+ printf("Enter the string of valid characters : ");
+ scanf("%s",valchar);
+ lv=strlen(valchar);
+ 
+ for(i=0;i<ls;i++)
+ {
+     for(j=0;j<lv;j++)
+     {
+         if(str[i]==valchar[j])
+         {
+            printf("%c",str[i]);
+             
+         }
+         
+     }
+ }
+ 
+   
+}
